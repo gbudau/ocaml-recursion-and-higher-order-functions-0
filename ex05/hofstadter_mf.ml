@@ -8,6 +8,8 @@ and hfs_m (n: int) : int =
   else n - hfs_f (hfs_m (n - 1))
 
 let () =
+  hfs_m (-1) |> string_of_int |> print_endline;  (* Should output '-1' *)
+  hfs_f (-1) |> string_of_int |> print_endline;  (* Should output '-1' *)
   (* https://en.wikipedia.org/wiki/Hofstadter_sequence#Hofstadter_Female_and_Male_sequences *)
   hfs_m 0 |> string_of_int |> print_endline;  (* Should output '0' *)
   hfs_f 0 |> string_of_int |> print_endline;  (* Should output '1' *)
